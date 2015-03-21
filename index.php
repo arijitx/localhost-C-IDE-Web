@@ -75,6 +75,7 @@ C Compiler
     			exec('chmod 777 '.$user.$date);
     			echo "OUTPUT";
     			$inputFile=$user.$date.'.txt';
+    			exec ('chmod 777 '.$inputFile);
     			$file = fopen($inputFile, "w") or die("Unable to open file!");
     			fwrite($file, $input);
 
@@ -89,6 +90,7 @@ C Compiler
 			}
 			unlink($filename);
 			unlink($user.$date);
+			unlink($inputFile);
 			}
 		}
 		
